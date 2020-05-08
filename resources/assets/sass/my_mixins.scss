@@ -1,0 +1,126 @@
+@mixin input-focus {
+	&:focus {
+   border: 1px solid #262626;
+   box-shadow: none;
+   outline: 0;
+ }
+}
+
+@mixin border-none() {
+  border: 0;
+}
+
+@mixin border-default() {
+  border: 1px solid $border-color;
+}
+
+@mixin custom-border($border-value, $border-style, $border-color) {
+  border: $border-value $border-style $border-color;
+}
+
+@mixin custom-border-left($border-value, $border-style, $border-color) {
+  border-left: $border-value $border-style $border-color;
+}
+
+@mixin custom-border-right($border-value, $border-style, $border-color) {
+  border-right: $border-value $border-style $border-color;
+}
+
+@mixin custom-border-top($border-value, $border-style, $border-color) {
+  border-top: $border-value $border-style $border-color;
+}
+
+@mixin custom-border-bottom($border-value, $border-style, $border-color) {
+  border-bottom: $border-value $border-style $border-color;
+}
+
+@mixin border-width($border-top,$border-right,$border-bottom,$border-left) {
+  border-width: $border-top $border-right $border-bottom $border-left;
+}
+
+@mixin border-top-bottom() {
+  border: 1px solid $border-color;
+  border-width: 1px 0;
+}
+
+@mixin border-top-left() {
+  border: 1px solid $border-color;
+  border-width: 1px 0 0 1px;
+}
+
+@mixin border-left-right() {
+  border: 1px solid $border-color;
+  border-width: 0 1px;
+}
+
+@mixin border-left-bottom() {
+  border: 1px solid $border-color;
+  border-width: 0 0 1px 1px;
+}
+
+@mixin border-top() {
+  border: 1px solid $border-color;
+  border-width: 1px 0 0 0;
+}
+
+@mixin border-bottom() {
+ border: 1px solid $border-color;
+ border-width: 0 0 1px 0;
+}
+
+@mixin border-left() {
+  border: 1px solid $border-color;
+  border-width: 0 0 0 1px;
+}
+
+@mixin border-right() {
+ border: 1px solid $border-color;
+ border-width: 0 1px 0 0;
+}
+
+@mixin border-color($border-color) {
+ border-color: $border-color;
+}
+
+@mixin shadow-default() {
+  box-shadow: 0px 0px 10px #cccccc;
+}
+
+@mixin shadow-default-hover() {
+  box-shadow: 0px 0px 10px #e4e4e4;
+}
+
+@mixin shadow-none() {
+  box-shadow: none;
+}
+
+@mixin btn-shadow() {
+  box-shadow: 0px 0px 38px -9px #000;
+}
+
+@mixin btn-shadow-hover() {
+  box-shadow: 0px 0px 13px -5px #000;
+}
+
+@mixin hr() {
+  border-bottom: 1px solid #dce0e0;
+}
+
+@mixin rounded-img($width,$height) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  @include border-radius(50%);
+}
+
+@mixin prefix-border($border-radius) {
+  border-radius: $border-radius 0 0 $border-radius;
+  border: 1px solid $border-color;
+  border-right: none;
+}
+
+@mixin suffix-border($border-radius) {
+ border-radius: 0 $border-radius $border-radius 0;
+ border: 1px solid $border-color;
+ border-left: none;
+}
